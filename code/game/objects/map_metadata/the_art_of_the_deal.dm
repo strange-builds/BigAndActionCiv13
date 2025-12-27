@@ -1073,6 +1073,24 @@
 				/obj/item/weapon/disk/blue/fake,
 				/obj/item/weapon/disk/green/fake)
 
+// Doctor NPC (You can heal here)
+
+/obj/structure/npc_vendor/doctor
+    name = "Doctor"
+    desc = "Sir, we cant heal hole bigger, then you."
+    icon_state = "afghciv8"  // Твой спрайт в icons/mob/
+
+/obj/structure/npc_vendor/doctor/attack_hand(mob/living/human/user as mob)
+    var/obj/item/stack/money/M = locate(/obj/item/stack/money) in user
+    if(M && M.value*M.amount >= 50*4)  // Civ13 хак
+        M.amount -= 50/5               // 10 пачек
+        if(M.amount <= 0)
+            qdel(M)
+        user.revive(full_heal = TRUE)
+    else
+        to_chat(user, "You need 50$!")
+
+
 // Biker NPC (Drugs and weapons)
 
 /obj/structure/npc_vendor/biker // To be converted to a proper NPC
