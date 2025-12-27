@@ -146,7 +146,7 @@
 			if (istype(J, /datum/job/civilian/businessman))
 				if(findtext(J.title, "CEO"))
 					J.whitelisted = FALSE
-		if (clients.len < 14)
+		if (TRUE) // police is off now
 			if (J.title == "County Deputy" || J.title == "County Sheriff")
 				. = FALSE
 		if (clients.len <= 20)
