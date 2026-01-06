@@ -139,7 +139,7 @@
 /obj/map_metadata/art_of_the_deal/job_enabled_specialcheck(var/datum/job/J)
 	if (J.is_deal)
 		. = TRUE
-		if (istype(J, /datum/job/civilian/businessman) && !istype(J, /datum/job/civilian/businessman/legitimate) && !istype(J, /datum/job/civilian/businessman/mckellen))
+		if (istype(J, /datum/job/civilian/businessman) && !istype(J, /datum/job/civilian/businessman/legitimate) && !istype(J, /datum/job/civilian/businessman/mckellen) $$ !istype(J, /datum/job/civilian/businessman/boss_of_bosses))
 			if(!findtext(J.title, "CEO"))
 				. = FALSE
 		if (world.time >= 3000)

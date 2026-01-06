@@ -2065,6 +2065,14 @@
 	spawn(50)
 		if (H.client)
 			H.client.screen += new/obj/screen/areashow_aod("Area Location","8,14", H, null, "")
+
+/datum/job/civilian/businessman/boss_of_bosses
+	title = "Boss Of Bosses"
+	selection_color = "#000000"
+	min_positions = 1
+	max_positions = 1
+	is_officer = TRUE
+
 /datum/job/civilian/businessman/yellow
 	title = "Goldstein Solutions"
 	selection_color = "#7e7e06"
