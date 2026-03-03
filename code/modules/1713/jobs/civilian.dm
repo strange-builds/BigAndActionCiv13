@@ -2299,6 +2299,19 @@
 	..()
 	return TRUE
 
+/datum/job/civilian/businessman/american
+	title = "Burger Corporation"
+	selection_color = "#d0dd13"
+
+/datum/job/civilian/businessman/american/CEO
+	title = "Burger Corporation CEO"
+	is_officer = TRUE
+	min_positions = 1
+	max_positions = 1
+	rank_abbreviation = "CEO"
+	whitelisted = TRUE
+	is_vip = TRUE
+
 /datum/job/civilian/businessman/mckellen
 	title = "McKellen Staff"
 	selection_color = "#ff883e"
